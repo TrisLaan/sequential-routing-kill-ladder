@@ -1,0 +1,1001 @@
+[
+  {
+    "instance_id": "yt-dlp__yt-dlp-12684",
+    "repo": "yt-dlp/yt-dlp",
+    "model": "gpt-5.4",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 14,
+    "cost_usd": 0.53747,
+    "n_fail_steps": 2,
+    "n_test_steps": 2,
+    "gold_files": [
+      "yt_dlp/extractor/youtube/_video.py",
+      "yt_dlp/jsinterp.py"
+    ],
+    "agent_files": [
+      "yt_dlp/jsinterp.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.0166375
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.015224999999999999
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.015302499999999998
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.019190000000000002
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.02567
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0305675
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0471875
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0495575
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.052055
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0529975
+      },
+      {
+        "i": 10,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.05851250000000001
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0544425
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.050685
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.049440000000000005
+      }
+    ]
+  },
+  {
+    "instance_id": "joke2k__faker-2190",
+    "repo": "joke2k/faker",
+    "model": "gpt-5.4",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 7,
+    "cost_usd": 0.10925250000000002,
+    "n_fail_steps": 0,
+    "n_test_steps": 0,
+    "gold_files": [
+      "faker/providers/person/en_PK/__init__.py"
+    ],
+    "agent_files": [
+      "faker/providers/person/en_PK/__init__.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.007435000000000001
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0059525
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.01071
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0204375
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.016435
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.02437
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0239125
+      }
+    ]
+  },
+  {
+    "instance_id": "aws-cloudformation__cfn-lint-4016",
+    "repo": "aws-cloudformation/cfn-lint",
+    "model": "gpt-5.4",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 8,
+    "cost_usd": 0.09909000000000001,
+    "n_fail_steps": 1,
+    "n_test_steps": 0,
+    "gold_files": [
+      "src/cfnlint/data/schemas/other/iam/policy.json",
+      "src/cfnlint/data/schemas/other/iam/policy_identity.json",
+      "src/cfnlint/rules/resources/iam/IdentityPolicy.py"
+    ],
+    "agent_files": [
+      "src/cfnlint/data/schemas/other/iam/policy.json"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: =========================\nFAILED test/unit/rules/resources/iam/test_identity_policy.py::TestIdentityPolicies::test_pattern_sid - AssertionError: Lists differ: [<ValidationErr",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.0064475
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005455
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.011767499999999998
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.017115
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.016315
+      },
+      {
+        "i": 5,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.012992499999999999
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.015420000000000001
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.013577500000000001
+      }
+    ]
+  },
+  {
+    "instance_id": "aws-cloudformation__cfn-lint-4009",
+    "repo": "aws-cloudformation/cfn-lint",
+    "model": "gpt-5.4",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 12,
+    "cost_usd": 0.6025824999999999,
+    "n_fail_steps": 3,
+    "n_test_steps": 0,
+    "gold_files": [
+      "src/cfnlint/rules/conditions/Used.py",
+      "src/cfnlint/template/template.py",
+      "src/cfnlint/template/transforms/_language_extensions.py"
+    ],
+    "agent_files": [
+      "src/cfnlint/template/transforms/_language_extensions.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.1350575
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.014129999999999998
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.01726
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.025129999999999996
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0268125
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.032165
+      },
+      {
+        "i": 6,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.05231999999999999
+      },
+      {
+        "i": 7,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.048159999999999994
+      },
+      {
+        "i": 8,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0603375
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0805475
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.05567999999999999
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.054982500000000004
+      }
+    ]
+  },
+  {
+    "instance_id": "aws-cloudformation__cfn-lint-3982",
+    "repo": "aws-cloudformation/cfn-lint",
+    "model": "gpt-5.4",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 17,
+    "cost_usd": 0.667495,
+    "n_fail_steps": 6,
+    "n_test_steps": 1,
+    "gold_files": [
+      "src/cfnlint/data/schemas/other/iam/policy_identity.json",
+      "src/cfnlint/data/schemas/other/iam/policy_resource.json"
+    ],
+    "agent_files": [
+      "src/cfnlint/rules/resources/iam/Policy.py"
+    ],
+    "edited_right_files": false,
+    "grade_detail": "f2p_all_pass=False; tail: ================================================================\nFAILED test/unit/rules/resources/iam/test_identity_policy.py::TestIdentityPolicies::test_duplicate_sid - Asse",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.0061075
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0049949999999999994
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.01318
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0193
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.027135
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0329225
+      },
+      {
+        "i": 6,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.039395
+      },
+      {
+        "i": 7,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0431025
+      },
+      {
+        "i": 8,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.054985000000000006
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0481925
+      },
+      {
+        "i": 10,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0490675
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.058995
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.048507499999999995
+      },
+      {
+        "i": 13,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0571375
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.054185000000000004
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.05812
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.052167500000000006
+      }
+    ]
+  },
+  {
+    "instance_id": "wireservice__csvkit-1281",
+    "repo": "wireservice/csvkit",
+    "model": "gpt-5.4",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 14,
+    "cost_usd": 0.6757825000000001,
+    "n_fail_steps": 0,
+    "n_test_steps": 3,
+    "gold_files": [
+      "CHANGELOG.rst",
+      "csvkit/cli.py",
+      "docs/scripts/csvcut.rst",
+      "man/csvcut.1"
+    ],
+    "agent_files": [
+      "csvkit/cli.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===================================================================================================================================\nPASSED tests/test_cli.py::TestCli::test_par",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.16874999999999998
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.017662499999999998
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0185975
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.026315
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0320475
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.037195
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.05592
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.041717500000000005
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0447125
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0444375
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.053337499999999996
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.045405
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.04519499999999999
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.044489999999999995
+      }
+    ]
+  },
+  {
+    "instance_id": "dynaconf__dynaconf-1249",
+    "repo": "dynaconf/dynaconf",
+    "model": "gpt-5.4",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 34,
+    "cost_usd": 2.7040325000000003,
+    "n_fail_steps": 12,
+    "n_test_steps": 15,
+    "gold_files": [
+      "docs/advanced.md",
+      "dynaconf/__init__.py",
+      "dynaconf/base.py",
+      "dynaconf/hooking.py",
+      "dynaconf/loaders/__init__.py",
+      "dynaconf/loaders/py_loader.py"
+    ],
+    "agent_files": [
+      "dynaconf/base.py",
+      "dynaconf/hooking.py",
+      "dynaconf/loaders/__init__.py",
+      "dynaconf/loaders/py_loader.py",
+      "dynaconf/utils/__init__.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: =========================================================================================================\nFAILED tests/test_py_loader.py::test_decorated_hooks - ImportError: ",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006217499999999999
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0077275
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0136825
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.020215
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.026619999999999998
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.027824999999999996
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.036707500000000004
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.039045
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0441075
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0549575
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0677825
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0672625
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.060735
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.12165999999999999
+      },
+      {
+        "i": 14,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0702275
+      },
+      {
+        "i": 15,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0807975
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0874475
+      },
+      {
+        "i": 17,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.1027125
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.08317499999999999
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.08235500000000001
+      },
+      {
+        "i": 20,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.08730500000000001
+      },
+      {
+        "i": 21,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.10839499999999999
+      },
+      {
+        "i": 22,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.1129375
+      },
+      {
+        "i": 23,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.107855
+      },
+      {
+        "i": 24,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.11392000000000001
+      },
+      {
+        "i": 25,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.1179975
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.10859250000000001
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.11223
+      },
+      {
+        "i": 28,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.1254375
+      },
+      {
+        "i": 29,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.11547
+      },
+      {
+        "i": 30,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.1262825
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.12639
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.11988750000000001
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.1200725
+      }
+    ]
+  },
+  {
+    "instance_id": "dynaconf__dynaconf-1241",
+    "repo": "dynaconf/dynaconf",
+    "model": "gpt-5.4",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 9,
+    "cost_usd": 0.15909749999999998,
+    "n_fail_steps": 0,
+    "n_test_steps": 0,
+    "gold_files": [
+      "dynaconf/utils/parse_conf.py"
+    ],
+    "agent_files": [
+      "dynaconf/utils/parse_conf.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.005614999999999999
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040625
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0112975
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.016715
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.020294999999999997
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0300525
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0240975
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0236275
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.023335
+      }
+    ]
+  }
+]

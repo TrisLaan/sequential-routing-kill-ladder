@@ -1,0 +1,13 @@
+# caches
+__pycache__/
+*.pyc
+
+# transient run logs / budget tracker (regenerated each run)
+phase3_*.log
+phase3_select*.log
+phase3_spend.json
+*.diff
+
+# large SQL-phase artifacts (not Phase 3; keep repo focused)
+traces.sqlite
+traces_phase2.sqlite

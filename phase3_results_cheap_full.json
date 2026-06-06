@@ -1,0 +1,5265 @@
+[
+  {
+    "instance_id": "stanfordnlp__dspy-8739",
+    "repo": "stanfordnlp/dspy",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.1927164,
+    "n_fail_steps": 13,
+    "n_test_steps": 4,
+    "gold_files": [
+      "dspy/primitives/module.py"
+    ],
+    "agent_files": [
+      "dspy/primitives/module.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0007856
+      },
+      {
+        "i": 1,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0007728000000000001
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008576
+      },
+      {
+        "i": 3,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008788000000000001
+      },
+      {
+        "i": 4,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0009364
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010364
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010432
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010896
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011548
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.001384
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013824
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0015012000000000003
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001604
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016404000000000002
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019060000000000001
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020968
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023096
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002412
+      },
+      {
+        "i": 18,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0026568
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0026908
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030104000000000003
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030156000000000002
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032564
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035696
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038712000000000004
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0041476
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004360800000000001
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004464
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0046192
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004778
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004985600000000001
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0050464
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0050812
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0054508000000000004
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005342
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0055588
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005598800000000001
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0058244
+      },
+      {
+        "i": 38,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005841600000000001
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006171200000000001
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0060992
+      },
+      {
+        "i": 41,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0064468
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0068856
+      },
+      {
+        "i": 43,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006686000000000001
+      },
+      {
+        "i": 44,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006789600000000001
+      },
+      {
+        "i": 45,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0069164000000000005
+      },
+      {
+        "i": 46,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007000400000000001
+      },
+      {
+        "i": 47,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0070308
+      },
+      {
+        "i": 48,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0070940000000000005
+      },
+      {
+        "i": 49,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0076348
+      }
+    ]
+  },
+  {
+    "instance_id": "openai__openai-agents-python-1601",
+    "repo": "openai/openai-agents-python",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 17,
+    "cost_usd": 0.0261668,
+    "n_fail_steps": 3,
+    "n_test_steps": 3,
+    "gold_files": [
+      "examples/tools/web_search_filters.py",
+      "src/agents/model_settings.py",
+      "src/agents/models/openai_responses.py",
+      "src/agents/tool.py"
+    ],
+    "agent_files": [
+      "src/agents/models/openai_responses.py",
+      "src/agents/tool.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail:  in <module>\n    from .openai_responses import Converter as OpenAIResponsesConverter\nE     File \"C:\\p3\\openai__openai-agents-python-1601\\testbed\\src\\agents\\models\\openai_resp",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0005764
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005868
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007232
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008372
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009316000000000001
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010312000000000001
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011724
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013464000000000002
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0014260000000000002
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013904
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015788000000000002
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020328
+      },
+      {
+        "i": 12,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0022284
+      },
+      {
+        "i": 13,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0022924
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0024772
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027804
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027552
+      }
+    ]
+  },
+  {
+    "instance_id": "fonttools__fonttools-3907",
+    "repo": "fonttools/fonttools",
+    "model": "gpt-4.1-mini",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 21,
+    "cost_usd": 0.03350480000000001,
+    "n_fail_steps": 6,
+    "n_test_steps": 3,
+    "gold_files": [
+      "Lib/fontTools/feaLib/builder.py",
+      "Lib/fontTools/feaLib/parser.py",
+      "Lib/fontTools/feaLib/variableScalar.py"
+    ],
+    "agent_files": [
+      "Lib/fontTools/feaLib/parser.py",
+      "Lib/fontTools/feaLib/variableScalar.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: =======================================================================================================================================\nPASSED Tests/feaLib/parser_test.py::Par",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0004996
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005200000000000001
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0006640000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008719999999999999
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009024
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009484000000000001
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010696
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0012656
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0014088
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0014868000000000001
+      },
+      {
+        "i": 10,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0017140000000000002
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018396
+      },
+      {
+        "i": 12,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0017580000000000002
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020452
+      },
+      {
+        "i": 14,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0019884000000000004
+      },
+      {
+        "i": 15,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0023348
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025264
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024096
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024296
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024132
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024088
+      }
+    ]
+  },
+  {
+    "instance_id": "Tuxemon__Tuxemon-3068",
+    "repo": "Tuxemon/Tuxemon",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 18,
+    "cost_usd": 0.03867,
+    "n_fail_steps": 2,
+    "n_test_steps": 0,
+    "gold_files": [
+      "docs/handcrafted/condition_list.rst",
+      "mods/tuxemon/maps/spyder.yaml",
+      "tuxemon/event/actions/modify_bill.py",
+      "tuxemon/event/conditions/bill_exists.py",
+      "tuxemon/event/conditions/bill_is.py",
+      "tuxemon/money.py"
+    ],
+    "agent_files": [
+      "mods/tuxemon/maps/spyder.yaml"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ===============================================================================================================\nFAILED tests/tuxemon/test_money.py::TestMoneyManager::test_get",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0005716
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005576000000000001
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008232000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009948000000000001
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011024
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013824000000000002
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015368
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0017144
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019240000000000001
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0021028
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022120000000000004
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029712000000000002
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032099999999999997
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032372000000000004
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035604
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0036336
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035792000000000003
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035564000000000004
+      }
+    ]
+  },
+  {
+    "instance_id": "PyPSA__PyPSA-1325",
+    "repo": "PyPSA/PyPSA",
+    "model": "gpt-4.1-mini",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 8,
+    "cost_usd": 0.0079972,
+    "n_fail_steps": 2,
+    "n_test_steps": 4,
+    "gold_files": [
+      "doc/references/release-notes.rst",
+      "pypsa/networks.py"
+    ],
+    "agent_files": [
+      "pypsa/networks.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0007284
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007028000000000001
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009124000000000001
+      },
+      {
+        "i": 3,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0009652
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0010108
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0009788000000000002
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0013544
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013444
+      }
+    ]
+  },
+  {
+    "instance_id": "a2aproject__a2a-python-394",
+    "repo": "a2aproject/a2a-python",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.19863200000000003,
+    "n_fail_steps": 15,
+    "n_test_steps": 9,
+    "gold_files": [
+      "src/a2a/server/request_handlers/default_request_handler.py",
+      "src/a2a/server/tasks/result_aggregator.py"
+    ],
+    "agent_files": [
+      "src/a2a/server/tasks/task_manager.py"
+    ],
+    "edited_right_files": false,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0006868
+      },
+      {
+        "i": 1,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0007132
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007228000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009248
+      },
+      {
+        "i": 4,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0010536
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010952
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001166
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013332
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015816
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001682
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0017428000000000003
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020116
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020056
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022700000000000003
+      },
+      {
+        "i": 14,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0025012000000000003
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024660000000000003
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025184
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002702
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0028272
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030456000000000003
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032348
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0033932
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0036576
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003706
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038208
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0039664
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004070000000000001
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004137200000000001
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0041848
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0042824000000000004
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004446
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0052328
+      },
+      {
+        "i": 32,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0051236
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005562
+      },
+      {
+        "i": 34,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0055596
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005671600000000001
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0059644
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0058772
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.005814400000000001
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005906799999999999
+      },
+      {
+        "i": 40,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0061340000000000006
+      },
+      {
+        "i": 41,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006321200000000001
+      },
+      {
+        "i": 42,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0064856
+      },
+      {
+        "i": 43,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0066016
+      },
+      {
+        "i": 44,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006975200000000001
+      },
+      {
+        "i": 45,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0069196
+      },
+      {
+        "i": 46,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0074167999999999994
+      },
+      {
+        "i": 47,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.007262800000000001
+      },
+      {
+        "i": 48,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0078756
+      },
+      {
+        "i": 49,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0079784
+      }
+    ]
+  },
+  {
+    "instance_id": "celery__celery-9853",
+    "repo": "celery/celery",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.17353480000000004,
+    "n_fail_steps": 24,
+    "n_test_steps": 16,
+    "gold_files": [
+      "celery/app/defaults.py",
+      "celery/worker/consumer/tasks.py",
+      "celery/worker/strategy.py",
+      "docs/userguide/configuration.rst"
+    ],
+    "agent_files": [
+      "celery/app/defaults.py",
+      "celery/worker/consumer/consumer.py",
+      "celery/worker/strategy.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================\nFAILED t/unit/worker/test_consumer.py::test_Tasks::test_qos_with_worker_eta_task_limit - AssertionError: assert None == 100\nFAILED t/unit/worke",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008972000000000001
+      },
+      {
+        "i": 1,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0009312000000000001
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.000982
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011704
+      },
+      {
+        "i": 4,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0012644000000000002
+      },
+      {
+        "i": 5,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0012884
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013852
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015088000000000002
+      },
+      {
+        "i": 8,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0015972000000000002
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016132
+      },
+      {
+        "i": 10,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0016904
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001718
+      },
+      {
+        "i": 12,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0017820000000000002
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018796000000000002
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020092
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0021856
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023384
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025172000000000003
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027072
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0028024
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031484
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031712000000000003
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037076
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034364
+      },
+      {
+        "i": 24,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0035180000000000003
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035252
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035956
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038416000000000006
+      },
+      {
+        "i": 28,
+        "rc": 5,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0038504
+      },
+      {
+        "i": 29,
+        "rc": 4,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0038844
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004051600000000001
+      },
+      {
+        "i": 31,
+        "rc": 4,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0040756
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004214
+      },
+      {
+        "i": 33,
+        "rc": 4,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0042508
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004477200000000001
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0045224
+      },
+      {
+        "i": 36,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0045604
+      },
+      {
+        "i": 37,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004736000000000001
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004888
+      },
+      {
+        "i": 39,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.005026
+      },
+      {
+        "i": 40,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.005172000000000001
+      },
+      {
+        "i": 41,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.005325600000000001
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005489600000000001
+      },
+      {
+        "i": 43,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0055804
+      },
+      {
+        "i": 44,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0058568000000000005
+      },
+      {
+        "i": 45,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0058944
+      },
+      {
+        "i": 46,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0060832
+      },
+      {
+        "i": 47,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006268400000000001
+      },
+      {
+        "i": 48,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0064596
+      },
+      {
+        "i": 49,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0066560000000000005
+      }
+    ]
+  },
+  {
+    "instance_id": "stanfordnlp__dspy-8605",
+    "repo": "stanfordnlp/dspy",
+    "model": "gpt-4.1-mini",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 41,
+    "cost_usd": 0.26495840000000004,
+    "n_fail_steps": 11,
+    "n_test_steps": 3,
+    "gold_files": [
+      "dspy/clients/cache.py",
+      "dspy/predict/predict.py"
+    ],
+    "agent_files": [
+      "dspy/predict/predict.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: ===============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0007852
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007932
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011824000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022692
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023924
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0026408000000000004
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027856
+      },
+      {
+        "i": 7,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0029448
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029448
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003024
+      },
+      {
+        "i": 10,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0031524
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0037180000000000004
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032971999999999997
+      },
+      {
+        "i": 13,
+        "rc": -1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0049652
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0051584000000000005
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005235200000000001
+      },
+      {
+        "i": 16,
+        "rc": -1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0069764000000000015
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007119600000000001
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007166
+      },
+      {
+        "i": 19,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0072744
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0073256
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0074912
+      },
+      {
+        "i": 22,
+        "rc": -1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.007474800000000001
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0078724
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.008037200000000001
+      },
+      {
+        "i": 25,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0079404
+      },
+      {
+        "i": 26,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.007897600000000001
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007950800000000001
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0090508
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.009198
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.009253200000000001
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.009404000000000001
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.009587200000000002
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0097972
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0097924
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0099404
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.010166
+      },
+      {
+        "i": 37,
+        "rc": -1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.010138000000000001
+      },
+      {
+        "i": 38,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0103012
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0102772
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.010237600000000001
+      }
+    ]
+  },
+  {
+    "instance_id": "casbin__pycasbin-392",
+    "repo": "casbin/pycasbin",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 48,
+    "cost_usd": 0.22018720000000003,
+    "n_fail_steps": 15,
+    "n_test_steps": 8,
+    "gold_files": [
+      "casbin/management_enforcer.py",
+      "casbin/persist/adapters/file_adapter.py",
+      "casbin/synced_enforcer.py"
+    ],
+    "agent_files": [
+      "casbin/management_enforcer.py",
+      "casbin/synced_enforcer.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: =\nFAILED tests/test_management_api.py::TestManagementApi::test_modify_grouping_policy_api - AssertionError: Element counts were not equal:\nFAILED tests/test_management_api.py",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0004736
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00046520000000000003
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0006312
+      },
+      {
+        "i": 3,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008996000000000001
+      },
+      {
+        "i": 4,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0009383999999999999
+      },
+      {
+        "i": 5,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0009836
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010164
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020304
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022436
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024428
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027044
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0029980000000000002
+      },
+      {
+        "i": 12,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0030012
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030088000000000003
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031440000000000005
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003196
+      },
+      {
+        "i": 16,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0034528000000000002
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034608
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035108
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00417
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0043372
+      },
+      {
+        "i": 21,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004237200000000001
+      },
+      {
+        "i": 22,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0046492
+      },
+      {
+        "i": 23,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0048000000000000004
+      },
+      {
+        "i": 24,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0049696
+      },
+      {
+        "i": 25,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.005138800000000001
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.0053892
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005451200000000001
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0052384
+      },
+      {
+        "i": 29,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0052612
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0054044
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0054612
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0055376
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006246800000000001
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0063724
+      },
+      {
+        "i": 35,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006371600000000001
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0065328
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0065972
+      },
+      {
+        "i": 38,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007447199999999999
+      },
+      {
+        "i": 39,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0073172
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0074944
+      },
+      {
+        "i": 41,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007607200000000001
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0076332
+      },
+      {
+        "i": 43,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.007816
+      },
+      {
+        "i": 44,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0078588
+      },
+      {
+        "i": 45,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.008126000000000001
+      },
+      {
+        "i": 46,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.008058
+      },
+      {
+        "i": 47,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0080616
+      }
+    ]
+  },
+  {
+    "instance_id": "Pyomo__pyomo-3679",
+    "repo": "Pyomo/pyomo",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 21,
+    "cost_usd": 0.0647592,
+    "n_fail_steps": 5,
+    "n_test_steps": 0,
+    "gold_files": [
+      "pyomo/common/tee.py"
+    ],
+    "agent_files": [
+      "pyomo/contrib/pynumero/algorithms/solvers/cyipopt_solver.py"
+    ],
+    "edited_right_files": false,
+    "grade_detail": "f2p_all_pass=False; tail: fered_stdout_long_message - AttributeError: module 'pyomo.common.tee' has no attribute '_pipe_buffersize'\nFAILED pyomo/common/tests/test_tee.py::TestBuffering_capture::test_b",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0006976
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0006688
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019484
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0021932
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0021752
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022604
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024616
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00262
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027844000000000002
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029428
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003154
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0034348
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035200000000000006
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004894000000000001
+      },
+      {
+        "i": 14,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.003906
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0039128
+      },
+      {
+        "i": 16,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0039936
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040476
+      },
+      {
+        "i": 18,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0041656
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004534
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0044444
+      }
+    ]
+  },
+  {
+    "instance_id": "koxudaxi__datamodel-code-generator-2467",
+    "repo": "koxudaxi/datamodel-code-generator",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "wall_limit",
+    "submitted": false,
+    "num_steps": 40,
+    "cost_usd": 0.14831600000000003,
+    "n_fail_steps": 9,
+    "n_test_steps": 5,
+    "gold_files": [
+      "src/datamodel_code_generator/__init__.py"
+    ],
+    "agent_files": [
+      "src/datamodel_code_generator/__init__.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: m datamodel_code_generator import MIN_VERSION\nE     File \"C:\\p3\\koxudaxi__datamodel-code-generator-2467\\testbed\\src\\datamodel_code_generator\\__init__.py\", line 40\nE       fro",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007376
+      },
+      {
+        "i": 1,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0010328
+      },
+      {
+        "i": 2,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0010516
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001052
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011644
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013552000000000002
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016876
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020164000000000002
+      },
+      {
+        "i": 8,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0018964
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00201
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002066
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002208
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025148
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0026752000000000004
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0028948000000000003
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029576000000000003
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031508000000000005
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0033096
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035872000000000005
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035976000000000003
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037080000000000004
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038612
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040216
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004216
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0044428
+      },
+      {
+        "i": 25,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0048528
+      },
+      {
+        "i": 26,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0047404000000000005
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0048200000000000005
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0053804000000000005
+      },
+      {
+        "i": 29,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0051024
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0053
+      },
+      {
+        "i": 31,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0052808
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005489600000000001
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0063084000000000005
+      },
+      {
+        "i": 34,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0058032
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005922800000000001
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006112800000000001
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006672800000000001
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006386800000000001
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006927600000000001
+      }
+    ]
+  },
+  {
+    "instance_id": "sdv-dev__SDV-2636",
+    "repo": "sdv-dev/SDV",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 14,
+    "cost_usd": 0.0331484,
+    "n_fail_steps": 4,
+    "n_test_steps": 1,
+    "gold_files": [
+      "sdv/multi_table/hma.py"
+    ],
+    "agent_files": [
+      "sdv/multi_table/hma.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ===============================================================================\nFAILED tests/unit/multi_table/test_hma.py::TestHMASynthesizer::test__recreate_child_synthesize",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.00047640000000000003
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00048600000000000005
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016888
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0017392000000000002
+      },
+      {
+        "i": 4,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.002048
+      },
+      {
+        "i": 5,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0020648
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020856
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023444
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031296
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00332
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0033384
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0034028000000000005
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035516
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034728000000000003
+      }
+    ]
+  },
+  {
+    "instance_id": "sdv-dev__SDV-2634",
+    "repo": "sdv-dev/SDV",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 8,
+    "cost_usd": 0.0072376,
+    "n_fail_steps": 1,
+    "n_test_steps": 2,
+    "gold_files": [
+      "sdv/data_processing/datetime_formatter.py"
+    ],
+    "agent_files": [
+      "sdv/data_processing/datetime_formatter.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: =================================================================================================================================\nFAILED tests/unit/data_processing/test_datet",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0005408
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.000582
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0006656000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008132
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001136
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0011644000000000001
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0012104
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011252
+      }
+    ]
+  },
+  {
+    "instance_id": "a2aproject__a2a-python-302",
+    "repo": "a2aproject/a2a-python",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 24,
+    "cost_usd": 0.0577372,
+    "n_fail_steps": 7,
+    "n_test_steps": 6,
+    "gold_files": [
+      "src/a2a/server/agent_execution/context.py"
+    ],
+    "agent_files": [
+      "src/a2a/server/agent_execution/context.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ===================\nPASSED tests/server/agent_execution/test_context.py::TestRequestContext::test_metadata_property_with_content\nFAILED tests/server/agent_execution/test_cont",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.00047680000000000004
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005068
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013136
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0014888
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016836000000000002
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018232
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018495999999999999
+      },
+      {
+        "i": 7,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0021096
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022448
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0022648
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0024152
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0024972
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025988
+      },
+      {
+        "i": 13,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0025804
+      },
+      {
+        "i": 14,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0029324
+      },
+      {
+        "i": 15,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0029148
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029512
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030096000000000003
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031360000000000003
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032236
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032428
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0035648
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034588
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00345
+      }
+    ]
+  },
+  {
+    "instance_id": "django__asgiref-523",
+    "repo": "django/asgiref",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 8,
+    "cost_usd": 0.008470400000000001,
+    "n_fail_steps": 1,
+    "n_test_steps": 1,
+    "gold_files": [
+      "asgiref/local.py"
+    ],
+    "agent_files": [
+      "asgiref/local.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==========================================================================================================================================\nFAILED tests/test_local.py::test_de",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008359999999999999
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.000814
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009268
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001154
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011476000000000001
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0011896000000000003
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0012208000000000002
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011816
+      }
+    ]
+  },
+  {
+    "instance_id": "celery__celery-9806",
+    "repo": "celery/celery",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.23352840000000002,
+    "n_fail_steps": 16,
+    "n_test_steps": 0,
+    "gold_files": [
+      "celery/result.py"
+    ],
+    "agent_files": [
+      "celery/result.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: 9: in __getattr__\n    module = __import__(self._object_origins[name], None, None,\ncelery\\canvas.py:27: in <module>\n    from celery.result import GroupResult, allow_join_resul",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0017724
+      },
+      {
+        "i": 1,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0017700000000000003
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018188
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019504000000000001
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0020856
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0021864
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023056
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024032
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025528
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027636
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030004000000000003
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003358
+      },
+      {
+        "i": 12,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0032812
+      },
+      {
+        "i": 13,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0041708000000000005
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037192
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040804
+      },
+      {
+        "i": 16,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0038756
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040492
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0042308
+      },
+      {
+        "i": 19,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0041948
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0044908000000000005
+      },
+      {
+        "i": 21,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0043672
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0045884
+      },
+      {
+        "i": 23,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.004714800000000001
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0047616
+      },
+      {
+        "i": 25,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0048264
+      },
+      {
+        "i": 26,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0048564
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0048616
+      },
+      {
+        "i": 28,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.005244800000000001
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005332400000000001
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005473200000000001
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005732800000000001
+      },
+      {
+        "i": 32,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0058116
+      },
+      {
+        "i": 33,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.005820400000000001
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005905200000000001
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0059304
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005992400000000001
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006117600000000001
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0062272000000000004
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006268000000000001
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0063084000000000005
+      },
+      {
+        "i": 41,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006360000000000001
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0064016
+      },
+      {
+        "i": 43,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0064488
+      },
+      {
+        "i": 44,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0065347999999999995
+      },
+      {
+        "i": 45,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0067008
+      },
+      {
+        "i": 46,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0068496
+      },
+      {
+        "i": 47,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.006894
+      },
+      {
+        "i": 48,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007010000000000001
+      },
+      {
+        "i": 49,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007128000000000001
+      }
+    ]
+  },
+  {
+    "instance_id": "rthalley__dnspython-1206",
+    "repo": "rthalley/dnspython",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.24145640000000007,
+    "n_fail_steps": 13,
+    "n_test_steps": 12,
+    "gold_files": [
+      "dns/message.py"
+    ],
+    "agent_files": [
+      "dns/message.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ======================================================================================================================================================================\nFAILED ",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0005920000000000001
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005964
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0014896000000000002
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001536
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016868
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019456
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019848
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023076
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0026204
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0026920000000000004
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0027532
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0030467999999999997
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.003296
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032976000000000004
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035056000000000006
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035988
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0036836
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037052
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004054
+      },
+      {
+        "i": 19,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0041968
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0043104
+      },
+      {
+        "i": 21,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004447200000000001
+      },
+      {
+        "i": 22,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0046196
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0045688000000000005
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0047488
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0049808000000000005
+      },
+      {
+        "i": 26,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0051476000000000004
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0055363999999999995
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0054508000000000004
+      },
+      {
+        "i": 29,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0056032
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0059064
+      },
+      {
+        "i": 31,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0059536
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0060428
+      },
+      {
+        "i": 33,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0062384
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0062344
+      },
+      {
+        "i": 35,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0064784000000000005
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0064568
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006646000000000002
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.006853200000000001
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00683
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0070464
+      },
+      {
+        "i": 41,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0072068
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0071860000000000005
+      },
+      {
+        "i": 43,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007368
+      },
+      {
+        "i": 44,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0075752
+      },
+      {
+        "i": 45,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007554400000000001
+      },
+      {
+        "i": 46,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007754
+      },
+      {
+        "i": 47,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.007948
+      },
+      {
+        "i": 48,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0080356
+      },
+      {
+        "i": 49,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0081396
+      }
+    ]
+  },
+  {
+    "instance_id": "BerriAI__litellm-12188",
+    "repo": "BerriAI/litellm",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 39,
+    "cost_usd": 0.17342319999999997,
+    "n_fail_steps": 9,
+    "n_test_steps": 1,
+    "gold_files": [
+      "litellm/litellm_core_utils/streaming_chunk_builder_utils.py"
+    ],
+    "agent_files": [
+      "litellm/llms/vertex_ai/vertex_ai_non_gemini.py"
+    ],
+    "edited_right_files": false,
+    "grade_detail": "f2p_all_pass=False; tail: ================================================================================================================================\nFAILED tests/test_litellm/litellm_core_utils/",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0012272000000000001
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011988
+      },
+      {
+        "i": 2,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0025584
+      },
+      {
+        "i": 3,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0025624000000000003
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002634
+      },
+      {
+        "i": 5,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0027112
+      },
+      {
+        "i": 6,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0027632
+      },
+      {
+        "i": 7,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.002804
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0028360000000000004
+      },
+      {
+        "i": 9,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0029408000000000004
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0029920000000000003
+      },
+      {
+        "i": 11,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0031108
+      },
+      {
+        "i": 12,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0031899999999999997
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032084000000000006
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032432
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034244
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035784
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037080000000000004
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037332
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0039180000000000005
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0040076
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004031600000000001
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0041852
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0044004000000000005
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0046056
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004750000000000001
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0049124
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005022
+      },
+      {
+        "i": 28,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005224400000000001
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0063544000000000005
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006442400000000001
+      },
+      {
+        "i": 31,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0065012
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0067468
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0069704
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0068692
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0079564
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.008700400000000002
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.008658800000000001
+      },
+      {
+        "i": 38,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0087416
+      }
+    ]
+  },
+  {
+    "instance_id": "sooperset__mcp-atlassian-581",
+    "repo": "sooperset/mcp-atlassian",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 41,
+    "cost_usd": 0.17655120000000002,
+    "n_fail_steps": 7,
+    "n_test_steps": 0,
+    "gold_files": [
+      "src/mcp_atlassian/jira/config.py"
+    ],
+    "agent_files": [
+      "src/mcp_atlassian/servers/main.py"
+    ],
+    "edited_right_files": false,
+    "grade_detail": "f2p_all_pass=False; tail: =========================================================================================================================================================================\nFAIL",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0006968
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007096
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009188
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010872
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0013072000000000001
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0014448
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015124000000000001
+      },
+      {
+        "i": 7,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016644000000000001
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018488000000000003
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0018944
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022244
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0028784
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031244000000000003
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0033048
+      },
+      {
+        "i": 14,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035396
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0035467999999999997
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038244000000000004
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004042
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0042024
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004230800000000001
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004445200000000001
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004476400000000001
+      },
+      {
+        "i": 22,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0046972
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0047128000000000005
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0050548
+      },
+      {
+        "i": 25,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005114000000000001
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005391600000000001
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0056500000000000005
+      },
+      {
+        "i": 28,
+        "rc": 127,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.005476400000000001
+      },
+      {
+        "i": 29,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.005586800000000001
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006022400000000001
+      },
+      {
+        "i": 31,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0060228
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006549600000000001
+      },
+      {
+        "i": 33,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.006509600000000001
+      },
+      {
+        "i": 34,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006998
+      },
+      {
+        "i": 35,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.006995200000000001
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.007397600000000001
+      },
+      {
+        "i": 37,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0074728
+      },
+      {
+        "i": 38,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0075472000000000004
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.008273599999999999
+      },
+      {
+        "i": 40,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.008154800000000002
+      }
+    ]
+  },
+  {
+    "instance_id": "PyPSA__PyPSA-1265",
+    "repo": "PyPSA/PyPSA",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 11,
+    "cost_usd": 0.0206832,
+    "n_fail_steps": 3,
+    "n_test_steps": 2,
+    "gold_files": [
+      "doc/references/release-notes.rst",
+      "pypsa/networks.py",
+      "pypsa/optimization/abstract.py"
+    ],
+    "agent_files": [
+      "pypsa/networks.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0014224
+      },
+      {
+        "i": 1,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0014272
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015240000000000002
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015228000000000002
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0015776
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.001704
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002236
+      },
+      {
+        "i": 7,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0022296
+      },
+      {
+        "i": 8,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0022752
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023736
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0023907999999999998
+      }
+    ]
+  },
+  {
+    "instance_id": "Aider-AI__aider-4269",
+    "repo": "Aider-AI/aider",
+    "model": "gpt-4.1-mini",
+    "resolved": 0,
+    "exit_status": "step_limit",
+    "submitted": false,
+    "num_steps": 50,
+    "cost_usd": 0.187732,
+    "n_fail_steps": 18,
+    "n_test_steps": 16,
+    "gold_files": [
+      "aider/commands.py"
+    ],
+    "agent_files": [
+      "aider/commands.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=False; tail: ==============================================================================================================================================================================",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0005788
+      },
+      {
+        "i": 1,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0005768
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0007476
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008800000000000001
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0009440000000000001
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0011352
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0012184000000000001
+      },
+      {
+        "i": 7,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0012351999999999999
+      },
+      {
+        "i": 8,
+        "rc": 2,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0015400000000000001
+      },
+      {
+        "i": 9,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0016660000000000002
+      },
+      {
+        "i": 10,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0016108000000000001
+      },
+      {
+        "i": 11,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0019412
+      },
+      {
+        "i": 12,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0019176000000000002
+      },
+      {
+        "i": 13,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0022492000000000002
+      },
+      {
+        "i": 14,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0022008
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0024416000000000004
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0025140000000000006
+      },
+      {
+        "i": 17,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0026052000000000002
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.002896
+      },
+      {
+        "i": 19,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0028520000000000004
+      },
+      {
+        "i": 20,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0031108000000000004
+      },
+      {
+        "i": 21,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0033348
+      },
+      {
+        "i": 22,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0032508
+      },
+      {
+        "i": 23,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0034852
+      },
+      {
+        "i": 24,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0037740000000000004
+      },
+      {
+        "i": 25,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0036516
+      },
+      {
+        "i": 26,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0038880000000000004
+      },
+      {
+        "i": 27,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0042392
+      },
+      {
+        "i": 28,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0040888
+      },
+      {
+        "i": 29,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0043104
+      },
+      {
+        "i": 30,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0046592000000000005
+      },
+      {
+        "i": 31,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004512400000000001
+      },
+      {
+        "i": 32,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.004734
+      },
+      {
+        "i": 33,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005085200000000001
+      },
+      {
+        "i": 34,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.004938400000000001
+      },
+      {
+        "i": 35,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0051600000000000005
+      },
+      {
+        "i": 36,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005511600000000001
+      },
+      {
+        "i": 37,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0053648
+      },
+      {
+        "i": 38,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0055864
+      },
+      {
+        "i": 39,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.005935600000000001
+      },
+      {
+        "i": 40,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0057888
+      },
+      {
+        "i": 41,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0060104
+      },
+      {
+        "i": 42,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0063572
+      },
+      {
+        "i": 43,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0062104000000000005
+      },
+      {
+        "i": 44,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006432
+      },
+      {
+        "i": 45,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006785200000000001
+      },
+      {
+        "i": 46,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0066384
+      },
+      {
+        "i": 47,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.006860000000000001
+      },
+      {
+        "i": 48,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0072124
+      },
+      {
+        "i": 49,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0070656
+      }
+    ]
+  },
+  {
+    "instance_id": "a2aproject__a2a-python-226",
+    "repo": "a2aproject/a2a-python",
+    "model": "gpt-4.1-mini",
+    "resolved": 1,
+    "exit_status": "submitted",
+    "submitted": true,
+    "num_steps": 20,
+    "cost_usd": 0.0476504,
+    "n_fail_steps": 8,
+    "n_test_steps": 10,
+    "gold_files": [
+      "pyproject.toml",
+      "src/a2a/server/apps/jsonrpc/jsonrpc_app.py"
+    ],
+    "agent_files": [
+      "src/a2a/server/apps/jsonrpc/jsonrpc_app.py"
+    ],
+    "edited_right_files": true,
+    "grade_detail": "f2p_all_pass=True; tail: =======================================================\nPASSED tests/server/apps/jsonrpc/test_serialization.py::test_starlette_agent_card_with_api_key_scheme_alias\nPASSED test",
+    "step_checks": [
+      {
+        "i": 0,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008136
+      },
+      {
+        "i": 1,
+        "rc": 1,
+        "check": "fail",
+        "is_test": false,
+        "cost": 0.0008448
+      },
+      {
+        "i": 2,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0008964000000000001
+      },
+      {
+        "i": 3,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0010132
+      },
+      {
+        "i": 4,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0012116
+      },
+      {
+        "i": 5,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.00204
+      },
+      {
+        "i": 6,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0021148
+      },
+      {
+        "i": 7,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0021676
+      },
+      {
+        "i": 8,
+        "rc": 1,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0025768
+      },
+      {
+        "i": 9,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0026791999999999996
+      },
+      {
+        "i": 10,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0027784000000000003
+      },
+      {
+        "i": 11,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0028908
+      },
+      {
+        "i": 12,
+        "rc": 0,
+        "check": "none",
+        "is_test": false,
+        "cost": 0.0030540000000000003
+      },
+      {
+        "i": 13,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0031116000000000004
+      },
+      {
+        "i": 14,
+        "rc": 2,
+        "check": "fail",
+        "is_test": true,
+        "cost": 0.0032208000000000002
+      },
+      {
+        "i": 15,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0031360000000000003
+      },
+      {
+        "i": 16,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.003298
+      },
+      {
+        "i": 17,
+        "rc": 0,
+        "check": "pass",
+        "is_test": true,
+        "cost": 0.0032572
+      },
+      {
+        "i": 18,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032832
+      },
+      {
+        "i": 19,
+        "rc": 0,
+        "check": "pass",
+        "is_test": false,
+        "cost": 0.0032624000000000004
+      }
+    ]
+  }
+]
