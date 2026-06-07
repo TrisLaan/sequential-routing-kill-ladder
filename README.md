@@ -1,10 +1,8 @@
 # sql-cost-opt → code-agent cost-routing: a kill-ladder study
 
-<!-- TODO(prose): one-line summary. Suggested shape: "An honest, staged
-investigation into whether SEQUENTIAL (MDP) cost-routing between a cheap and a
-strong model is a defensible moat — across text-to-SQL and code agents — that
-ends by closing its own thesis." Write your own one-liner here. -->
-**TODO — one-line summary.**
+A staged, falsification-first study of whether sequential (MDP-style) cost-routing
+between a cheap and a strong model is a defensible moat for LLM agents — tested
+across text-to-SQL and code agents, and closed by its own evidence for ~$50.
 
 > Status: research complete. The sequential/MDP thesis is **honestly closed** on
 > the domains tested; the remaining real value is per-prompt cost *substitution*
@@ -16,21 +14,27 @@ ends by closing its own thesis." Write your own one-liner here. -->
 
 ## 1. The question / thesis
 
-<!-- TODO(prose): explain, in your framing:
-  - What "sequential MDP routing as a moat" means: a policy that, step by step
-    inside a single multi-step task, decides whether to spend the cheap or the
-    strong model, using accumulated state to ANTICIPATE where strong is needed —
-    as opposed to (a) always-strong, (b) a static per-task classifier/bandit, or
-    (c) reactive escalate-on-failure.
-  - Why it would matter if real: it would be a defensible, data-driven moat
-    (cost down with no quality loss) that a competitor couldn't trivially copy,
-    because it requires the trajectory data + the learned value function.
-  - The two things that must BOTH hold for the MDP framing to have teeth:
-    (1) long horizon, and (2) genuine sequential coupling (early decisions change
-    later optimal actions) that reaction/substitution can't already capture. -->
-**TODO — thesis prose.** Load-bearing definitions to keep precise: *sequential/MDP
-routing* (anticipatory, step-level) vs *escalate-on-failure* (reactive) vs
-*cost-substitution* (per-task, portfolio/bandit).
+The bet was that cost-optimising an LLM agent is fundamentally a sequential
+decision problem, not a per-prompt one. The idea: inside a single multi-step task,
+a learned policy decides at each step whether to spend the cheap or the strong
+model, using the accumulated trajectory state to anticipate where strong is
+actually needed — rather than discovering it reactively after a cheap step fails.
+
+If real, that would be a defensible moat. A competitor can copy a per-prompt router
+in an afternoon, but anticipatory routing requires the trajectory data and a learned
+value function that prices downstream consequences — something you can't trivially
+reproduce. The product wouldn't be the router; it would be the data and the quality
+guarantee.
+
+The framing only has teeth if two things both hold: (1) the tasks have genuine
+horizon, and (2) there is real sequential coupling — early decisions change the
+optimal later actions in a way that reaction and substitution can't already capture
+for free. The right baselines are therefore not a naive bandit but the things a
+competent engineer actually builds: always-strong, a static per-task classifier, and
+escalate-on-failure (run cheap, redo with strong when a step's check fails). The moat
+must beat those, not a strawman. This study tests, cheaply and in sequence, whether
+(1) and (2) hold — and the answer, across both domains, is that (1) can hold while
+(2) does not.
 
 ---
 
@@ -48,9 +52,9 @@ more expensive rung. Numbers are decisive figures; full citations in `docs/SUMMA
 | 4 | **Diversity probe** (Stage 1A, out-of-family) | Does out-of-family break the strong⊇cheap nesting / lift the ceiling? | nesting break **1/35**; union ceiling **15/35 (43%)** = +1 task; cost-substitution oracle **≈69%** saving (winner varies per task) | ceiling lift **≈nil**; value is **portfolio**, not MDP |
 | 5 | **Mixed-trajectory** (Stage 6, direct splice) | Does early-step authorship actually propagate (true sequential coupling)? | rescue-beyond-strong **0**; sabotage **0**; k-flips **0**; cost **−7.7%** @early, **+41.6%** @mid | coupling **WEAK** → **thesis CLOSED** |
 
-<!-- TODO(prose): a sentence or two framing this table as the centerpiece — that
-each rung was pre-committed to be able to KILL the thesis, and that the project's
-value is the discipline of the ladder, not a positive result. -->
+Each rung was pre-committed to be able to kill the thesis before the data existed;
+passing a gate only buys the next, more expensive rung. The project's contribution
+is the discipline of the ladder and the honesty of the gates — not a positive result.
 
 ---
 
@@ -72,9 +76,16 @@ value is the discipline of the ladder, not a positive result. -->
   problem (commodity, copyable), **not** the sequential anticipation an MDP would
   add. [`docs/SUMMARY.md` §3]
 
-<!-- TODO(prose): your framing of "honestly closed" — what would have changed the
-verdict, and the one residual the offline data couldn't rule out before Stage 6
-(positive transfer), which Stage 6 then closed as net-negative. -->
+**"Honestly closed"** means the verdict is measured, not inferred. What would have
+reopened it: a non-trivial rescue rate in the mixed-trajectory splice (cheap building
+state that strong then converts into a solve it couldn't reach alone), or an outcome
+that depended on where the handoff happened — either would have been direct evidence
+of exploitable sequential coupling. Neither appeared. The one residual the offline
+analysis (Stage 5) could not rule out was positive transfer — the possibility that
+cheap's partial work makes strong's completion cheaper than starting fresh. Stage 6
+closed that too: inheriting more cheap context made the strong completion more
+expensive (+41.6%), not less. So the handoff neither resolves more nor costs less than
+simply using strong. The sequential layer has nothing left to price.
 
 ---
 
@@ -104,22 +115,39 @@ What transfers to a next project (all in this repo):
 - **Direct mixed-trajectory splicing** (`phase3_handoff.py`) — true cheap→strong
   handoff carrying real on-disk + conversation state, mock-validated at $0.
 
-<!-- TODO(prose, optional): which one or two of these you'd most reuse and why. -->
+If I carried one thing forward, it's the **tracer + cost-scoping discipline**:
+phase-isolated DBs, per-step `action_model` logging, and policy-/arm-scoped cost
+queries that make a counterfactual arm structurally incapable of polluting the
+production baseline. It's unglamorous, but it's what let every later claim be
+recomputed offline from logged state for $0 — and what made the Stage 6 result
+trustworthy rather than an artifact of a leaky measurement.
 
 ---
 
 ## 5. What I'd do differently
 
-<!-- TODO(prose): YOUR argument. Note to self to write up:
-  Vertical selection for cost-routing should key on ASYMMETRIC ERROR COSTS, not
-  horizon length. SQL and code agents both had the property that strong⊇cheap and
-  failures were either clean-but-wrong (no trigger) or recoverable by reaction —
-  so the MDP's anticipation had nothing to price. A domain where a wrong cheap
-  action is expensive/irreversible (asymmetric error cost) is where anticipatory
-  routing could actually pay, regardless of horizon. Reference: Amin 2026.
-  -> add the citation and your reasoning here. -->
-**TODO — argue that vertical selection should key on asymmetric error costs, not
-horizon length (ref. Amin 2026).**
+I chose both verticals on the wrong axis. SQL and code agents were picked for
+measurability and horizon length — a hard pass/fail signal and genuinely multi-step
+trajectories. Both delivered on those, and both still produced a near-flat result.
+With hindsight the reason is structural and it's the same in both domains: strong ⊇
+cheap (the cheap model never resolves anything strong misses), and failures are either
+clean-but-wrong (no trigger to act on) or cheaply recoverable by reaction. When that
+holds, anticipatory routing has nothing to price — the cost of a wrong cheap decision
+is low and reversible, so knowing in advance that you'll need strong saves almost
+nothing over just escalating when it fails.
+
+The axis that actually governs routing value is **asymmetry and irreversibility of
+error cost, not horizon length**. Amin (2026, *Bayesian Orchestration of Multi-LLM
+Agents*) is instructive here: it reports a 34% cost reduction, but the gains come
+overwhelmingly from correcting a mismatched prior and from a 16:1 cost asymmetry
+between error types in hiring — not from horizon or model diversity. Its own analysis
+notes that under symmetric costs the framework collapses to a standard classifier. My
+domains were the symmetric, cheap-error case. A domain where a wrong cheap action is
+expensive or irreversible — agents that take real actions, commit code to production,
+move money, trigger downstream processes that aren't free to undo — is where
+anticipation could actually pay, regardless of horizon. That is the selection criterion
+I'd lead with next time: not "is this long and measurable?" but "is a wrong cheap
+decision here costly and hard to reverse?"
 
 ---
 
@@ -148,8 +176,6 @@ python phase3_handoff.py plan          # show the handoff plan
 python phase3_handoff.py run           # execute splices (writes traces_phase3_stage6.sqlite)
 ```
 
-<!-- TODO(prose, optional): note that the SQL phase (archive/) needs the BIRD dev
-set (set BIRD_DEV_ROOT) and its trace DBs, which are .gitignored / not shipped. -->
 Notes: the committed trace DBs + results JSON make steps (2) reproducible with no
 spend. The SQL phase lives in [`archive/`](archive/) (historical; needs the BIRD
 dev set and the .gitignored SQL trace DBs). See [`docs/`](docs/) for the full
