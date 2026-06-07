@@ -1,13 +1,27 @@
+# secrets — API keys; MUST never be committed
+.env
+
 # caches
 __pycache__/
 *.pyc
 
-# transient run logs / budget tracker (regenerated each run)
+# transient run logs (regenerated each run; may contain local absolute paths)
 phase3_*.log
 phase3_select*.log
-phase3_spend.json
 *.diff
 
-# large SQL-phase artifacts (not Phase 3; keep repo focused)
+# database backups / scratch
+*.bak
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# large SQL-phase trace DBs (Phase 1/2; not part of the Phase-3 story, and the
+# load-bearing SQL numbers are captured in docs/FINDINGS.md + docs/SUMMARY.md)
 traces.sqlite
 traces_phase2.sqlite
+
+# NOTE: the spend ledgers (phase3_spend.json, phase3_oof_spend.json,
+# phase3_stage6_spend.json) are intentionally COMMITTED so the exact cost
+# figures are public and auditable.

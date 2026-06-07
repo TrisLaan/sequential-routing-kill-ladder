@@ -197,6 +197,119 @@ def _classify_failures(arm: str, results: list[dict]):
           f"(>=1 failing check) — simulatable from step_checks logs.")
 
 
+# ===================== OUT-OF-FAMILY MODEL-DIVERSITY PROBE =====================
+# Separate provider (OpenRouter) => separate budget ledger. We do NOT touch
+# phase3_spend.json (the OpenAI $40 ceiling). This stage's ceiling is $15 with a
+# $12 soft-stop, and the OpenRouter key itself is capped at $15 as a final backstop.
+OOF_SPEND_FILE = config.ROOT / "phase3_oof_spend.json"
+# NOTE: these thresholds are in ESTIMATE space (config.PRICES list rates), which
+# runs ~1.6x hot vs OpenRouter's real charges (confirmed against the live key
+# balance). The TRUE hard backstop is the $15 cap set on the OpenRouter key
+# itself (provider-enforced: calls are rejected once real spend hits $15). So we
+# set the estimate-space limits high enough not to truncate a full 3-arm run
+# prematurely; the real cap, not these numbers, is what actually bounds spend.
+OOF_BREAKER_USD = 25.0
+OOF_SOFT_STOP_USD = 22.0
+OOF_MODELS = [  # (model_id, policy_label)
+    ("qwen/qwen3-coder", "qwen3coder"),
+    ("deepseek/deepseek-v3.2", "deepseek_v32"),
+    ("z-ai/glm-4.6", "glm46"),
+]
+OOF_STEP_LIMIT = 50
+OOF_PER_TASK_CAP = 2.0
+
+
+class OOFSpend:
+    """Cumulative OpenRouter spend, persisted to its OWN file; $15 hard breaker."""
+
+    def __init__(self):
+        self.total = 0.0
+        if OOF_SPEND_FILE.exists():
+            self.total = json.loads(OOF_SPEND_FILE.read_text()).get("total_usd", 0.0)
+
+    def add(self, delta: float):
+        self.total += delta
+        OOF_SPEND_FILE.write_text(json.dumps({"total_usd": self.total}, indent=2))
+        if self.total > OOF_BREAKER_USD:
+            raise CircuitBreaker(
+                f"OpenRouter cumulative ${self.total:.4f} > ${OOF_BREAKER_USD}")
+
+
+def _union_tasks():
+    """All 35 distinct tasks = Stage2 + Stage3 + Stage4 manifests, deduped, ordered."""
+    from phase3_tasks import MANIFEST, MANIFEST_LIGHT, MANIFEST_FULL
+    seen, tasks = set(), []
+    for p in (MANIFEST, MANIFEST_LIGHT, MANIFEST_FULL):
+        for t in load_manifest(p)["chosen"]:
+            if t["instance_id"] not in seen:
+                seen.add(t["instance_id"])
+                tasks.append(t)
+    return tasks
+
+
+def run_oof():
+    """Run the 3 out-of-family arms on all 35 tasks via OpenRouter. Spends real $."""
+    tasks = _union_tasks()
+    spend = OOFSpend()
+    db = TraceLogger(str(config.PHASE3_DB_PATH))
+    print(f"=== OUT-OF-FAMILY PROBE: {len(tasks)} tasks x {len(OOF_MODELS)} models "
+          f"| step_limit={OOF_STEP_LIMIT} per_task_cap=${OOF_PER_TASK_CAP} "
+          f"| soft-stop ${OOF_SOFT_STOP_USD} hard ${OOF_BREAKER_USD} "
+          f"| starting cumulative ${spend.total:.4f} ===")
+    try:
+        for model, label in OOF_MODELS:
+            # Skip a model already fully logged (idempotent re-entry after a stop).
+            done = {r[0] for r in db.conn.execute(
+                "SELECT task_id FROM trajectory WHERE policy_label=?", (label,)).fetchall()}
+            results = []
+            print(f"\n#### arm {label} (model={model}) — {len(done)} already logged ####")
+            for i, t in enumerate(tasks, 1):
+                iid = t["instance_id"]
+                if iid in done:
+                    print(f"[{label} {i}/{len(tasks)}] {iid}: already logged, skip")
+                    continue
+                if spend.total >= OOF_SOFT_STOP_USD:
+                    print(f"\n*** SOFT-STOP: cumulative ${spend.total:.4f} >= "
+                          f"${OOF_SOFT_STOP_USD}. Stopping before {iid}. ***")
+                    raise CircuitBreaker("soft-stop")
+                R.git_clean_reset(iid, t["base_commit"])
+                agent = CodeAgent(
+                    client=OpenAIClient.for_openrouter(),
+                    model=model, reasoning_effort=None, tracer=db,
+                    policy_label=label, step_limit=OOF_STEP_LIMIT,
+                    per_task_cost_cap=OOF_PER_TASK_CAP, cmd_timeout=CMD_TIMEOUT_S,
+                    wall_limit_s=WALL_LIMIT_S, on_spend=spend.add)
+                rr = agent.run(instance_id=iid, repo=t["repo"],
+                               problem_statement=t["problem_statement"],
+                               cwd=str(R.testbed_dir(iid)), venv_scripts=_venv_scripts(iid))
+                agent_diff = R.git_diff(iid)
+                g = grade_submission(t, agent_diff)
+                db.conn.execute("UPDATE trajectory SET final_success=?, success_method=? "
+                                "WHERE trajectory_id=?",
+                                (g.resolved, "f2p_all_pass", rr.trajectory_id))
+                db.conn.commit()
+                gold_f = _diff_files(t["patch"]); agent_f = _diff_files(agent_diff)
+                results.append({"instance_id": iid, "model": model, "resolved": g.resolved,
+                                "exit_status": rr.exit_status,
+                                "submitted": rr.exit_status == "submitted",
+                                "num_steps": rr.num_steps, "cost_usd": rr.total_cost_usd,
+                                "edited_right_files": bool(set(agent_f) & set(gold_f)),
+                                "grade_detail": g.detail[:200]})
+                print(f"[{label} {i}/{len(tasks)}] {iid}: resolved={g.resolved} "
+                      f"exit={rr.exit_status} steps={rr.num_steps} "
+                      f"task_cost=${rr.total_cost_usd:.4f}  ||  CUMULATIVE=${spend.total:.4f}")
+            outp = config.ROOT / f"phase3_results_oof_{label}.json"
+            outp.write_text(json.dumps(results, indent=2))
+            print(f"  wrote {outp.name} ({len(results)} new rows)")
+    except CircuitBreaker as e:
+        print(f"\n*** STOPPED: {e} — cumulative ${spend.total:.4f}. "
+              f"Partial results saved; re-run 'oof' to resume (idempotent). ***")
+        db.close()
+        sys.exit(2)
+    db.close()
+    print(f"\n=== OUT-OF-FAMILY PROBE COMPLETE. cumulative ${spend.total:.4f} ===")
+
+
 def mock_dryrun():
     """$0: drive the full loop with a scripted MockClient against task #1's testbed."""
     from agent.client import MockClient
@@ -266,6 +379,8 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "mock"
     if cmd == "mock":
         mock_dryrun()
+    elif cmd == "oof":
+        run_oof()
     elif cmd == "cheap":
         _run_arm("cheap", CHEAP_MODEL, None, None)
     elif cmd == "strong":

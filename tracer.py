@@ -17,7 +17,14 @@ import config
 
 _BENCHMARKS = ("bird", "spider", "swebench_live")
 _POLICIES = ("baseline_strong", "shadow", "advisory", "active",
-             "cheap_only", "strong_only")
+             "cheap_only", "strong_only",
+             # out-of-family model-diversity probe (Phase 3 Stage 1A)
+             "qwen3coder", "deepseek_v32", "glm46",
+             # Phase 3 Stage 6 mixed-trajectory handoffs (state inherited across a
+             # mid-task model switch). cs = cheap->strong, sc = strong->cheap; the
+             # handoff step k lives in trajectory.notes. Written to a dedicated
+             # stage-6 db so prior aggregates can't be polluted.
+             "mixed_cs", "mixed_sc")
 _DECISIONS = ("schema_retrieval", "draft_sql", "repair", "finalize",
               "agent_step", "submit")
 # Phase 2: counterfactual-arm discriminator on trajectory. Nullable, validated
@@ -35,7 +42,9 @@ CREATE TABLE IF NOT EXISTS trajectory (
   benchmark        TEXT NOT NULL CHECK (benchmark IN ('bird','spider','swebench_live')),
   policy_label     TEXT NOT NULL CHECK (policy_label IN
                      ('baseline_strong','shadow','advisory','active',
-                      'cheap_only','strong_only')),
+                      'cheap_only','strong_only',
+                      'qwen3coder','deepseek_v32','glm46',
+                      'mixed_cs','mixed_sc')),
   gold_sql         TEXT,
   final_pred_sql   TEXT,
   final_success    INTEGER,

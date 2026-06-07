@@ -1,6 +1,7 @@
 """Model pricing and path config for the text-to-SQL cost-opt harness."""
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -17,10 +18,12 @@ PHASE3_DB_PATH = ROOT / "traces_phase3.sqlite"
 
 # Benchmark dev-set roots. Raw strings (r"...") so backslashes aren't read as
 # escape sequences. adapter.py reads these — do not hardcode paths there.
-BIRD_DEV_ROOT = Path(r"C:\Users\jacat\Downloads\dev\dev_20240627")
-# TODO(jacat): set the real Spider dev path; the 'spider' benchmark won't load
-# until this points at a directory containing dev.json and database/.
-SPIDER_DEV_ROOT = Path(r"C:\path\to\spider\dev")
+# Point BIRD_DEV_ROOT at your local BIRD dev download (the directory that
+# contains dev.json and database/); override via the BIRD_DEV_ROOT env var.
+BIRD_DEV_ROOT = Path(os.environ.get("BIRD_DEV_ROOT", r"C:\path\to\bird\dev"))
+# Set the real Spider dev path; the 'spider' benchmark won't load until this
+# points at a directory containing dev.json and database/.
+SPIDER_DEV_ROOT = Path(os.environ.get("SPIDER_DEV_ROOT", r"C:\path\to\spider\dev"))
 
 # (input_per_1M, output_per_1M) in USD.
 # OpenAI standard short-context, non-cached rates, verified 2026-06-03.
@@ -30,6 +33,13 @@ SPIDER_DEV_ROOT = Path(r"C:\path\to\spider\dev")
 PRICES: dict[str, tuple[float, float]] = {
     "gpt-5.4": (2.50, 15.0),       # strong
     "gpt-4.1-mini": (0.40, 1.60),  # cheap
+    # Out-of-family probe via OpenRouter (model-diversity / nesting-break test).
+    # Rates are OpenRouter list prices fetched live 2026-06-06; the underlying
+    # routed provider can differ slightly, so cost_usd() here is our ACCOUNTING
+    # estimate — the real hard backstop is the $15 cap set on the OpenRouter key.
+    "qwen/qwen3-coder": (0.22, 1.80),       # Qwen / Alibaba
+    "deepseek/deepseek-v3.2": (0.229, 0.343),  # DeepSeek
+    "z-ai/glm-4.6": (0.43, 1.74),           # Zhipu
 }
 
 

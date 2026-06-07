@@ -173,6 +173,98 @@ def _exec_bash(command: str, cwd: str, env_path_prepend: str, timeout: int) -> t
         return -1, f"[command timed out after {timeout}s; process tree killed]\n{out or ''}"
 
 
+def react_loop(*, client, model: str, reasoning_effort: str | None, tracer, tid: int,
+               messages: list, steps: list, cwd: str, venv_scripts: str,
+               start_idx: int, step_budget: int, per_task_cost_cap: float | None,
+               cmd_timeout: int, wall_limit_s: int, wall_start: float,
+               total_cost: float, on_spend=None) -> tuple[str, str, float, int]:
+    """Run the ReAct loop for up to `step_budget` steps starting at log index
+    `start_idx`, mutating `messages`/`steps` in place and logging each turn to the
+    tracer with THIS call's `model`/`reasoning_effort`.
+
+    This is the SINGLE shared loop body used by both the solo CodeAgent.run and the
+    mixed-trajectory handoff runner — so a mixed run is byte-for-byte the same per
+    step as a solo run, only the model/client swap between segments. Returns
+    (exit_status, submission, total_cost, next_idx). next_idx is where the next
+    segment would continue (the handoff index when the budget is exhausted without
+    a terminal submit/cap/wall event).
+    """
+    exit_status = "step_limit"
+    submission = ""
+    idx = start_idx
+    end = start_idx + step_budget
+    while idx < end:
+        if time.time() - wall_start > wall_limit_s:
+            exit_status = "wall_limit"
+            break
+        resp: LLMResponse = client.complete(model, messages, reasoning_effort=reasoning_effort)
+        step_cost = config.cost_usd(model, resp.prompt_tokens, resp.completion_tokens)
+        total_cost += step_cost
+        if on_spend:
+            on_spend(step_cost)
+        messages.append({"role": "assistant", "content": resp.text})
+
+        command, n = _parse_action(resp.text)
+        if command is None:
+            tracer.log_step(
+                trajectory_id=tid, step_index=idx, decision_type="agent_step",
+                action_model=model, action_effort=reasoning_effort,
+                prompt_tokens=resp.prompt_tokens, completion_tokens=resp.completion_tokens,
+                cost_usd=step_cost, output=resp.text[:2000], exec_error="format_error",
+                state_features={"returncode": None, "check": "none",
+                                "is_test_run": False, "n_action_blocks": n})
+            messages.append({"role": "user", "content": FORMAT_ERROR.format(n=n)})
+            steps.append(StepRecord(idx, "", 0, False, "none", step_cost,
+                                    resp.prompt_tokens, resp.completion_tokens))
+            idx += 1
+            if per_task_cost_cap and total_cost > per_task_cost_cap:
+                exit_status = "cost_capped"
+                break
+            continue
+
+        rc, out = _exec_bash(command, cwd, venv_scripts, cmd_timeout)
+
+        # Submission detected from the OUTPUT's first line == SENTINEL (rc 0), not
+        # the command text (agent prefixes `cd {cwd} && ...`). Matches solo run.
+        first_lines = out.lstrip().splitlines()
+        submitted_now = bool(rc == 0 and first_lines
+                             and first_lines[0].strip() == SUBMIT_SENTINEL)
+        is_submit = submitted_now
+        if submitted_now:
+            submission = "\n".join(first_lines[1:])
+
+        is_test = _is_test_run(command)
+        check = "pass" if rc == 0 else "fail"
+        decision = "submit" if submitted_now else "agent_step"
+        tracer.log_step(
+            trajectory_id=tid, step_index=idx, decision_type=decision,
+            action_model=model, action_effort=reasoning_effort,
+            prompt_tokens=resp.prompt_tokens, completion_tokens=resp.completion_tokens,
+            cost_usd=step_cost, output=(command + "\n---\n" + out)[:4000],
+            exec_error=(None if rc == 0 else f"returncode={rc}"),
+            state_features={"returncode": rc, "check": check,
+                            "is_test_run": is_test, "is_submit": is_submit})
+        steps.append(StepRecord(idx, command, rc, is_test, check, step_cost,
+                                resp.prompt_tokens, resp.completion_tokens))
+
+        if submitted_now:
+            exit_status = "submitted"
+            idx += 1
+            break
+
+        obs = out
+        if len(obs) > MAX_OBS_CHARS:
+            obs = (obs[:5000] + f"\n... [{len(out) - 10000} chars elided] ...\n"
+                   + obs[-5000:])
+        messages.append({"role": "user",
+                         "content": OBSERVATION_TEMPLATE.format(rc=rc, out=obs)})
+        idx += 1
+        if per_task_cost_cap and total_cost > per_task_cost_cap:
+            exit_status = "cost_capped"
+            break
+    return exit_status, submission, total_cost, idx
+
+
 class CodeAgent:
     """One agent rollout on one task with one model, logging to the tracer."""
 
@@ -204,84 +296,14 @@ class CodeAgent:
                 task=problem_statement, cwd=cwd)},
         ]
         steps: list[StepRecord] = []
-        total_cost = 0.0
-        exit_status = "step_limit"
-        submission = ""
         start = time.time()
-
-        for idx in range(self.step_limit):
-            if time.time() - start > self.wall_limit_s:
-                exit_status = "wall_limit"
-                break
-            resp: LLMResponse = self.client.complete(
-                self.model, messages, reasoning_effort=self.reasoning_effort)
-            step_cost = config.cost_usd(self.model, resp.prompt_tokens, resp.completion_tokens)
-            total_cost += step_cost
-            if self.on_spend:
-                self.on_spend(step_cost)
-            messages.append({"role": "assistant", "content": resp.text})
-
-            command, n = _parse_action(resp.text)
-            if command is None:
-                # log a no-action step, nudge format, continue
-                self.tracer.log_step(
-                    trajectory_id=tid, step_index=idx, decision_type="agent_step",
-                    action_model=self.model, action_effort=self.reasoning_effort,
-                    prompt_tokens=resp.prompt_tokens, completion_tokens=resp.completion_tokens,
-                    cost_usd=step_cost, output=resp.text[:2000], exec_error="format_error",
-                    state_features={"returncode": None, "check": "none",
-                                    "is_test_run": False, "n_action_blocks": n})
-                messages.append({"role": "user", "content": FORMAT_ERROR.format(n=n)})
-                steps.append(StepRecord(idx, "", 0, False, "none", step_cost,
-                                        resp.prompt_tokens, resp.completion_tokens))
-                if self.per_task_cost_cap and total_cost > self.per_task_cost_cap:
-                    exit_status = "cost_capped"
-                    break
-                continue
-
-            rc, out = _exec_bash(command, cwd, venv_scripts, self.cmd_timeout)
-
-            # Submission is detected from the OUTPUT's first line == SENTINEL (rc 0),
-            # NOT from the command text — the agent legitimately prefixes the submit
-            # command with `cd {cwd} && ...`, so a command-prefix gate misses it and
-            # the agent then burns budget on no-ops. (Matches mini-swe-agent's
-            # LocalEnvironment._check_finished, which also keys off the output.)
-            first_lines = out.lstrip().splitlines()
-            submitted_now = bool(rc == 0 and first_lines
-                                 and first_lines[0].strip() == SUBMIT_SENTINEL)
-            is_submit = submitted_now
-            if submitted_now:
-                submission = "\n".join(first_lines[1:])
-
-            is_test = _is_test_run(command)
-            check = "pass" if rc == 0 else "fail"
-            decision = "submit" if submitted_now else "agent_step"
-            self.tracer.log_step(
-                trajectory_id=tid, step_index=idx, decision_type=decision,
-                action_model=self.model, action_effort=self.reasoning_effort,
-                prompt_tokens=resp.prompt_tokens, completion_tokens=resp.completion_tokens,
-                cost_usd=step_cost, output=(command + "\n---\n" + out)[:4000],
-                exec_error=(None if rc == 0 else f"returncode={rc}"),
-                state_features={"returncode": rc, "check": check,
-                                "is_test_run": is_test, "is_submit": is_submit})
-            steps.append(StepRecord(idx, command, rc, is_test, check, step_cost,
-                                    resp.prompt_tokens, resp.completion_tokens))
-
-            if submitted_now:
-                exit_status = "submitted"
-                break
-
-            # append observation
-            obs = out
-            if len(obs) > MAX_OBS_CHARS:
-                obs = (obs[:5000] + f"\n... [{len(out) - 10000} chars elided] ...\n"
-                       + obs[-5000:])
-            messages.append({"role": "user",
-                             "content": OBSERVATION_TEMPLATE.format(rc=rc, out=obs)})
-
-            if self.per_task_cost_cap and total_cost > self.per_task_cost_cap:
-                exit_status = "cost_capped"
-                break
+        exit_status, submission, total_cost, _ = react_loop(
+            client=self.client, model=self.model, reasoning_effort=self.reasoning_effort,
+            tracer=self.tracer, tid=tid, messages=messages, steps=steps,
+            cwd=cwd, venv_scripts=venv_scripts, start_idx=0, step_budget=self.step_limit,
+            per_task_cost_cap=self.per_task_cost_cap, cmd_timeout=self.cmd_timeout,
+            wall_limit_s=self.wall_limit_s, wall_start=start, total_cost=0.0,
+            on_spend=self.on_spend)
 
         self.tracer.finish_trajectory(
             tid, final_pred_sql=submission[:2000] if submission else None,

@@ -1,0 +1,14 @@
+# Python 3.10 (developed on 3.10.4).
+#
+# Core runtime — needed to RUN the agent harness (any new model calls) and to
+# run the $0 offline reproduction (validate_baseline.py, analyze_*.py read only
+# stdlib + sqlite3, so the analysis path technically needs nothing here; openai
+# is the only hard dep for live runs).
+openai==2.40.0
+
+# Task selection only — phase3_tasks.py pulls SWE-bench-Live via HuggingFace
+# `datasets`. NOT required to reproduce the committed results: the chosen-task
+# manifests (phase3_manifest*.json) and trace DBs are already in the repo.
+pandas==2.3.0
+datasets==4.8.5
+pyarrow==24.0.0
