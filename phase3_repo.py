@@ -7,8 +7,8 @@ grading (phase3_grade.py), running on this Windows host with NO Docker:
 
 Design notes
 ------------
-* Work dirs live under C:\\p3 (SHORT path, OUTSIDE OneDrive) to dodge MAX_PATH
-  limits and OneDrive sync churn on multi-thousand-file venvs.
+* Work dirs live under C:\\p3 (SHORT path, outside any synced folder) to dodge
+  MAX_PATH limits and sync churn on multi-thousand-file venvs.
 * A single commit is fetched (`git fetch --depth 1 origin <sha>`) — GitHub allows
   fetching an arbitrary reachable SHA, so we never clone full history.
 * Tests are run by EXACT FAIL_TO_PASS node-id (argv list, no shell) so bracketed
@@ -26,7 +26,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-WORK_ROOT = Path("C:/p3")               # short, non-OneDrive, non-synced
+WORK_ROOT = Path("C:/p3")               # short, non-synced path
 COMMON_TEST_DEPS = [                      # best-effort; many suites import these
     "pytest", "pytest-mock", "pytest-asyncio", "freezegun", "responses",
 ]
